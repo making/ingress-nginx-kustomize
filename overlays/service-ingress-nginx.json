@@ -1,9 +1,12 @@
 [
   {
     "op": "add",
-    "path": "/metadata/labels",
+    "path": "/spec/ports/-",
     "value": {
-      "app": "ingress-nginx"
+      "name": "prometheus",
+      "port": 10254,
+      "targetPort": 10254,
+      "protocol": "TCP"
     }
   }
 ]
