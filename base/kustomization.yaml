@@ -1,0 +1,5 @@
+resources:
+- ../ingress-nginx/deploy/mandatory.yaml
+- ../ingress-nginx/deploy/provider/baremetal/service-nodeport.yaml
+- ingress-nginx-pdb.yml
+- ingress-nginx-servicemonitor.yml

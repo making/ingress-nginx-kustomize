@@ -1,0 +1,17 @@
+bases:
+- ../base
+patches:
+- ingress-nginx-configmap.yaml
+patchesJson6902:
+- target:
+    group: ""
+    version: v1
+    kind: Service
+    name: ingress-nginx
+  path: service-ingress-nginx.json
+- target:
+    group: extensions
+    version: v1beta1
+    kind: Deployment
+    name: nginx-ingress-controller
+  path: deployment-nginx-ingress-controller.json

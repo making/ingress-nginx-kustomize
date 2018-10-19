@@ -1,0 +1,31 @@
+[
+  {
+    "op": "replace",
+    "path": "/spec/replicas",
+    "value": 2
+  },
+  {
+    "op": "add",
+    "path": "/spec/template/spec/affinity",
+    "value": {
+      "podAntiAffinity": {
+        "requiredDuringSchedulingIgnoredDuringExecution": [
+          {
+            "labelSelector": {
+              "matchExpressions": [
+                {
+                  "key": "app",
+                  "operator": "In",
+                  "values": [
+                    "ingress-nginx"
+                  ]
+                }
+              ]
+            },
+            "topologyKey": "kubernetes.io/hostname"
+          }
+        ]
+      }
+    }
+  }
+]

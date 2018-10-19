@@ -1,0 +1,9 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/labels",
+    "value": {
+      "app": "ingress-nginx"
+    }
+  }
+]
